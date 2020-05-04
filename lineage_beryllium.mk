@@ -9,6 +9,9 @@ $(call inherit-product, device/xiaomi/beryllium/device.mk)
 # Inherit some common Halium stuff
 $(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)
 
+# Inherit fonts
+$(call inherit-product-if-exists, frameworks/base/data/fonts/fonts.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_beryllium
 PRODUCT_DEVICE := beryllium
