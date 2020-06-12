@@ -39,3 +39,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/beryllium/BoardConfigVendor.mk
+
+# Ramdisk
+BOARD_ROOT_EXTRA_FOLDERS += efs
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
