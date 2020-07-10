@@ -15,7 +15,6 @@ TARGET_SCREEN_WIDTH := 1080
 
 # FM
 PRODUCT_PACKAGES += \
-    FM2 \
     libqcomfm_jni \
     qcom.fmradio
 
@@ -23,9 +22,6 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_PACKAGES += \
-    NoCutoutOverlay
 
 # Properties
 -include $(LOCAL_PATH)/device-props.mk
@@ -64,7 +60,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/keylayout/uinput-goodix.kl:system/usr/keylayout/uinput-goodix.kl
-
-# PocketMode
-PRODUCT_PACKAGES += \
-    XiaomiPocketMode
